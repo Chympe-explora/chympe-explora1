@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Chympe Explora</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f0f0f0;
+    display:flex;
+    justify-content:center;
+}
+
+.container{
+    width:100%;
+    max-width:430px;
+    background:white;
+    min-height:100vh;
+}
+
+header{
+    background:#111;
+    color:white;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+.menu{
+    font-size:28px;
+}
+
+.hero{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.hero h1{
+    color:#2e7d32;
+    font-size:32px;
+}
+
+.hero p{
+    color:#666;
+    margin-top:8px;
+    font-size:18px;
+}
+
+.cover img{
+    width:100%;
+    display:block;
+}
+
+.card{
+    background:white;
+    margin:15px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.destination{
+    position:relative;
+    margin:15px;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.destination img{
+    width:100%;
+    display:block;
+}
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+}
+
+.book-btn{
+    display:block;
+    width:90%;
+    margin:15px auto;
+    padding:15px;
+    background:#25D366;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+}
+
+details{
+    margin:15px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.booking{
+    margin:15px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+}
+
+.booking h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.booking input,
+.booking textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.booking button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#25D366;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+}
+
+.contact{
+    margin:15px;
+    padding:20px;
+    background:white;
+    border-radius:15px;
+}
+
+.contact h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+  /* Smooth scrolling */
+html{
+    scroll-behavior:smooth;
+}
+
+/* Fade animation */
+.hero,
+.card,
+.destination,
+details,
+.booking,
+.contact{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Destination image hover */
+.destination img{
+    transition:0.5s;
+}
+
+.destination:hover img{
+    transform:scale(1.05);
+}
+
+/* Button animation */
+.book-btn,
+.booking button{
+    transition:0.3s;
+}
+
+.book-btn:active,
+.booking button:active{
+    transform:scale(0.95);
+}
+
+/* Sticky header shadow */
+header{
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+/* Accordion styling */
+summary{
+    cursor:pointer;
+    font-size:18px;
+    padding:10px;
+}
+
+details p{
+    padding-top:10px;
+    color:#555;
+}
+
+/* Mobile spacing */
+.destination,
+.card,
+.booking,
+.contact,
+details{
+    margin-bottom:20px;
+}
+
+/* Footer */
+footer{
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+/* Prevent desktop stretching */
+@media (min-width: 500px){
+    body{
+        background:#ddd;
+    }
+
+    .container{
+        box-shadow:0 0 25px rgba(0,0,0,0.15);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <div class="menu">☰</div>
+    <img src="logo.png" class="logo">
+</header>
+
+<section class="hero">
+    <h1>TEAM CHYMPE EXPLORA</h1>
+    <p>Adventure • Caves • Nature</p>
+</section>
+
+<section class="cover">
+    <img src="cover.jpg">
+</section>
+
+<section class="card">
+    <h2>ABOUT US</h2>
+    <p>
+        Team Chympe Explora is a local tourism initiative dedicated to promoting
+        the natural beauty, caves, waterfalls, and adventure destinations of
+        East Jaintia Hills while providing safe and memorable experiences.
+    </p>
+</section>
+
+<div class="destination">
+    <img src="waterfall1.jpg">
+    <div class="overlay">Krem Chympe Cave</div>
+</div>
+
+<div class="destination">
+    <img src="waterfall2.jpg">
+    <div class="overlay">Chympe Waterfall</div>
+</div>
+
+<div class="destination">
+    <img src="bridge.jpg">
+    <div class="overlay">Adventure Trail</div>
+</div>
+
+<div class="destination">
+    <img src="cave.jpg">
+    <div class="overlay">Nature Camping</div>
+</div>
+<details>
+    <summary><strong>OUR VISION</strong></summary>
+    <p>
+        To promote sustainable tourism and showcase the hidden
+        natural beauty of Meghalaya.
+    </p>
+</details>
+
+<details>
+    <summary><strong>OUR MISSION</strong></summary>
+    <p>
+        To provide safe, authentic, and unforgettable adventure
+        experiences while supporting local communities.
+    </p>
+</details>
+
+<section class="card">
+    <h2>REFUND POLICY</h2>
+    <p>
+        We do not hold responsibility for refunds arising out of
+        any natural weather condition, pandemic situation, or
+        man-made calamity that may occur.
+    </p>
+</section>
+
+<section class="booking">
+    <h2>Book Your Tour</h2>
+
+    <input type="text" id="name"
+        placeholder="Full Name">
+
+    <input type="tel" id="phone"
+        placeholder="Phone Number">
+
+    <input type="number" id="persons"
+        placeholder="Number of Persons">
+
+    <input type="date" id="date">
+
+    <textarea id="message"
+        placeholder="Special Requests"></textarea>
+
+    <button onclick="sendWhatsApp()">
+        Book via WhatsApp
+    </button>
+</section>
+
+<section class="contact">
+    <h2>TEAM CHYMPE EXPLORA</h2>
+
+    <p><strong>Address:</strong><br>
+    Brishyrnot HNO 34,
+    Near Football Ground,
+    PO: Lumshnong,
+    East Jaintia Hills,
+    Meghalaya 793200,
+    India</p>
+
+    <br>
+
+    <p><strong>Phone:</strong><br>
+    8787679579</p>
+
+    <br>
+
+    <p><strong>Email:</strong><br>
+    chympeexplora@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Team Chympe Explora
+</footer>
+
+<script>
+function sendWhatsApp(){
+
+    let name =
+        document.getElementById("name").value;
+
+    let phone =
+        document.getElementById("phone").value;
+
+    let persons =
+        document.getElementById("persons").value;
+
+    let date =
+        document.getElementById("date").value;
+
+    let message =
+        document.getElementById("message").value;
+
+    let text =
+`TEAM CHYMPE EXPLORA BOOKING
+
+Name: ${name}
+Phone: ${phone}
+Persons: ${persons}
+Tour Date: ${date}
+
+Special Request:
+${message}`;
+
+    let url =
+    "https://wa.me/6001877518?text="
+    + encodeURIComponent(text);
+
+    window.open(url, "_blank");
+}
+</script>
+
+</div>
+
+</body>
+</html>
