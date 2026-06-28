@@ -354,8 +354,8 @@ footer{
     <textarea id="message"
         placeholder="Special Requests"></textarea>
 
-    <button onclick="sendWhatsApp()">
-        Book via WhatsApp
+    <button type="button" onclick="sendWhatsApp()">
+    Book via WhatsApp
     </button>
 </section>
 
@@ -386,45 +386,28 @@ footer{
 </footer>
 
 <script>
-function sendWhatsApp(){
+function sendWhatsApp() {
 
-    let name =
-        document.getElementById("name").value;
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var persons = document.getElementById("persons").value;
+    var date = document.getElementById("date").value;
+    var message = document.getElementById("message").value;
 
-    let phone =
-        document.getElementById("phone").value;
+    var text =
+    "TEAM CHYMPE EXPLORA BOOKING\n\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Persons: " + persons + "\n" +
+    "Tour Date: " + date + "\n\n" +
+    "Special Request:\n" +
+    message;
 
-    let persons =
-        document.getElementById("persons").value;
+    var url =
+    "https://api.whatsapp.com/send?phone=916001877518&text=" +
+    encodeURIComponent(text);
 
-    let date =
-        document.getElementById("date").value;
-
-    let message =
-        document.getElementById("message").value;
-
-    let text =
-`TEAM CHYMPE EXPLORA BOOKING
-
-Name: ${name}
-Phone: ${phone}
-Visitors: ${visitors}
-Date: ${date}
-
-Visitor Information:
-${info}
-
-Special Requirements:
-${requirements}
-
-Package:
-${packageName}`;
-
-    window.open(
-        "https://wa.me/916001877518?text=" +
-        encodeURIComponent(message),
-        "_blank"
-    );
+    window.location.href = url;
 }
 </script>
 
