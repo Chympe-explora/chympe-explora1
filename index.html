@@ -408,17 +408,23 @@ function sendWhatsApp(){
 
 Name: ${name}
 Phone: ${phone}
-Persons: ${persons}
-Tour Date: ${date}
+Visitors: ${visitors}
+Date: ${date}
 
-Special Request:
-${message}`;
+Visitor Information:
+${info}
 
-    let url =
-    "https://wa.me/916001877518?text="
-    + encodeURIComponent(text);
+Special Requirements:
+${requirements}
 
-    window.open(url, "_blank");
+Package:
+${packageName}`;
+
+    window.open(
+        "https://wa.me/916001877518?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
 }
 </script>
 
